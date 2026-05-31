@@ -1,6 +1,7 @@
 import Logo from '@/components/Logo'
 import './Header.scss'
 import classNames from 'classnames'
+import Button from '@/components/Button'
 
 const Header = (props) => {
     const {
@@ -41,6 +42,9 @@ const Header = (props) => {
                     ))}
                 </ul>
             </nav>
+            <div className="header__actions">
+                    <Button />
+            </div>
         </div>
     </header>
 
