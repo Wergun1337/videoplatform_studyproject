@@ -1,3 +1,8 @@
+@mixin  starting-styles{
+            opacity: 0;
+            translate: 50%;
+        }
+
 .header{
     position: sticky;
     z-index: 100;
@@ -29,7 +34,10 @@
         padding: var(--container-padding-x);
         background-color: var(--color-black-20);
         border: none;
+        transition-duration: var(--transition-duration);
+        transition-behavior: allow-discrete;
 
+        
 
 
         @include tablet-above{
@@ -39,6 +47,14 @@
 
         &[open]{
             display: flex;
+
+            @starting-style{
+                @include starting-styles()
+            }
+        }
+
+        &:not([open]){
+            @include starting-styles()
         }
     }
 
