@@ -23,6 +23,10 @@
         }
     }
 
+    &.is-fixed{
+        position: fixed;
+    }
+
     &__overlay-menu-dialog{
         position: fixed;
         inset: 0;

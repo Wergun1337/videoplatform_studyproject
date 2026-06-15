@@ -7,6 +7,7 @@ import BurgerButton from '@/components/BurgerButton'
 const Header = (props) => {
     const {
         url,
+        isFixed,
     }=props
 
     const menuItems=[{
@@ -19,7 +20,7 @@ const Header = (props) => {
     },
     {
         label: 'Support',
-        href: '/supprot'
+        href: '/support'
     },
     {
         label: 'Subscriptions',
@@ -29,7 +30,9 @@ const Header = (props) => {
 
     return (
     
-    <header className='header' data-js-overlay-menu="" >
+    <header className={classNames('header', {
+        'is-fixed': isFixed,
+    })} data-js-overlay-menu="" >
         <div className="header__inner container">
             <Logo className="header__logo" loading="eager" />
             <dialog className="header__overlay-menu-dialog" data-js-overlay-menu-dialog="">
